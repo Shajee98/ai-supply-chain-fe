@@ -5,7 +5,6 @@ import { useRouter } from "next/navigation"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
-import { useAuthStore } from "@/lib/store/auth"
 import { Button } from "@/components/ui/button"
 import {
   Form,
@@ -45,7 +44,7 @@ export function LoginForm() {
     },
   })
 
-  async function onSubmit(data: LoginFormValues) {
+  async function onSubmit() {
     try {
       setIsLoading(true)
       // TODO: Replace with actual API call

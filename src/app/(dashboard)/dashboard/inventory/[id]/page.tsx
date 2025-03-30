@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { useParams, useRouter } from "next/navigation"
+import { useParams } from "next/navigation"
 import { Package, MapPin, Calendar, Hash, AlertTriangle } from "lucide-react"
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query"
 import { useToast } from "@/components/ui/use-toast"
@@ -117,7 +117,6 @@ type InventoryFormData = z.infer<typeof inventorySchema>;
 
 export default function InventoryDetailPage() {
   const params = useParams();
-  const router = useRouter();
   const { toast } = useToast();
   const queryClient = useQueryClient();
   const [isEditing, setIsEditing] = useState(false);
