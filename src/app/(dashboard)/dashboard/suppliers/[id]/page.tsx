@@ -106,7 +106,14 @@ const supplierSchema = z.object({
   lastUpdated: z.string(),
 });
 
-export default function SupplierDetailPage({ params }: { params: { id: string } }) {
+interface PageProps {
+  params: {
+    id: string
+  }
+  searchParams: { [key: string]: string | string[] | undefined }
+}
+
+export default function SupplierDetailPage({ params }: PageProps) {
   const { toast } = useToast();
   const queryClient = useQueryClient();
   const [isEditing, setIsEditing] = useState(false);
