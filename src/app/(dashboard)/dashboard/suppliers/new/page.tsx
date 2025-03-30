@@ -1,6 +1,5 @@
 "use client"
 
-import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { Building2, FileText, MapPin, Star } from "lucide-react"
 import { useMutation, useQueryClient } from "@tanstack/react-query"

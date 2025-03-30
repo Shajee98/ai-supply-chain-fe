@@ -1,4 +1,4 @@
-import { redirect } from "next/navigation"
+// import { redirect } from "next/navigation"
 import { cookies } from "next/headers"
 import { DashboardClientLayout } from "@/components/dashboard/dashboard-client-layout"
 
@@ -9,7 +9,7 @@ export default async function DashboardLayout({
   children: React.ReactNode
 }) {
   const cookieStore = await cookies()
-  const token = cookieStore.get("auth-token")
+  // const token = cookieStore.get("auth-token")
 
   // Commenting out for testing purposes
   // if (!token) {

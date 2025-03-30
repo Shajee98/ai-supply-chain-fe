@@ -1,8 +1,7 @@
 "use client"
 
-import { useState } from "react"
 import Link from "next/link"
-import { Search, Plus, Building2, Star, MapPin, AlertTriangle } from "lucide-react"
+import { Search, Plus, Star, MapPin, AlertTriangle } from "lucide-react"
 import { useQuery } from "@tanstack/react-query"
 import { format } from "date-fns"
 import { useToast } from "@/components/ui/use-toast"

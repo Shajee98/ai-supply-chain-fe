@@ -1,8 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { useRouter } from "next/navigation"
-import { Building2, Mail, Phone, MapPin, Star, AlertTriangle, Calendar, Package, FileText, History } from "lucide-react"
+import { Building2, Mail, Phone, MapPin, Star, AlertTriangle, Calendar, Package, FileText } from "lucide-react"
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query"
 import { format } from "date-fns"
 import { useToast } from "@/components/ui/use-toast"
@@ -108,7 +107,6 @@ const supplierSchema = z.object({
 });
 
 export default function SupplierDetailPage({ params }: { params: { id: string } }) {
-  const router = useRouter();
   const { toast } = useToast();
   const queryClient = useQueryClient();
   const [isEditing, setIsEditing] = useState(false);

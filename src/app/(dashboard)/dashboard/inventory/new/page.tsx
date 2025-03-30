@@ -1,6 +1,5 @@
 "use client"
 
-import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { Package, MapPin, Calendar, Hash } from "lucide-react"
 import { useMutation, useQueryClient } from "@tanstack/react-query"
@@ -42,16 +41,6 @@ interface Warehouse {
   name: string
   city: string
   state: string
-}
-
-interface NewInventoryItem {
-  productId: string
-  quantity: number
-  location: string
-  status: InventoryStatus
-  expiryDate?: string
-  lotNumber?: string
-  warehouseId: string
 }
 
 // Mock data - will be replaced with API call

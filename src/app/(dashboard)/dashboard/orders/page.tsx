@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Search, Plus, AlertTriangle, Package, Clock } from "lucide-react"
+import { Search, Plus, AlertTriangle, Clock } from "lucide-react"
 import { useQuery } from "@tanstack/react-query"
 import { useToast } from "@/components/ui/use-toast"
 import { format } from "date-fns"
@@ -247,7 +247,7 @@ export default function OrdersPage() {
   const { searchQuery, statusFilter, supplierFilter, setFilters } = useOrderStore();
   const [selectedOrder, setSelectedOrder] = useState<Order | null>(null);
   const [viewMode, setViewMode] = useState<"list" | "map">("list");
-  
+  console.log("selectedOrder ", selectedOrder)
   const { data: orders = [], isLoading, error } = useQuery({
     queryKey: ['orders'],
     queryFn: async () => {

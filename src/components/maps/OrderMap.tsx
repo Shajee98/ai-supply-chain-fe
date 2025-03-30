@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react"
 import mapboxgl from "mapbox-gl"
 import "mapbox-gl/dist/mapbox-gl.css"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Package, MapPin } from "lucide-react"
+import { MapPin } from "lucide-react"
 
 // Replace with your Mapbox access token
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN || ""
